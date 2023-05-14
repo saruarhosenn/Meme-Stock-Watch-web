@@ -1,0 +1,186 @@
+/*------ Pricing CSS ------*/
+.pricing-sec {
+  padding-top: 30rem;
+}
+
+.pricing-title {
+  .pricing-title-md::after {
+    content: "";
+    position: absolute;
+    bottom: -6rem;
+    right: 3.4rem;
+    width: 5.5rem;
+    height: 5.1rem;
+    background: url("../images/pricing/arrow-left.png") no-repeat top / 5.5rem
+      5.1rem;
+    @media #{$md} {
+      bottom: -5rem;
+    }
+    @media #{$sm} {
+      right: 3rem;
+    }
+    @media #{$xsm} {
+      right: 2.5rem;
+    }
+  }
+  @media #{$md} {
+    .pricing-title-lg {
+      font-size: 4.5rem;
+    }
+    .pricing-title-md {
+      font-size: 2rem;
+    }
+  }
+  @media #{$sm} {
+    .pricing-title-lg {
+      font-size: 3.5rem;
+    }
+    .pricing-title-md {
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .pricing-title-lg {
+      font-size: 3rem;
+    }
+    .pricing-title-md {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.pricing-tab {
+  margin: 5.5rem 0;
+  overflow: hidden;
+  .pricing-tablinks {
+    padding: 1.2rem 2.5rem;
+    flex-grow: 1;
+    &.active {
+      background-color: var(--secondary-bg);
+    }
+  }
+}
+
+.pricing-main-content {
+  .pricing-tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    .pricing-tabcontent-row {
+      --bs-gutter-y: 2.4rem;
+      --bs-gutter-x: 2.4rem;
+      @media only screen and (max-width: 699px) {
+        & > * {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.pricing-card {
+  padding: 3.6rem 3.6rem 4.6rem;
+  border-radius: 2.3rem;
+  transition: all 0.4s linear;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+  @media #{$xl} {
+    padding: 3.6rem 2.5rem 3rem;
+  }
+  .pricing-card-top-btn {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.6rem;
+    padding: 0.6rem 1.4rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.pricing-card-private {
+  overflow: hidden;
+  z-index: 1;
+  .pricing-card-circle {
+    width: 55rem;
+    height: 55rem;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    right: -30rem;
+    bottom: -18rem;
+  }
+}
+
+.pricing-card-header {
+  margin-top: 1rem;
+  .pricing-card-header-title {
+    margin: 1.3rem 0;
+  }
+}
+
+.pricing-card-body {
+  .pricing-card-body-title1 {
+    margin-bottom: 1.5rem;
+  }
+  .pricing-card-body-title2 {
+    margin: 1.5rem 0;
+  }
+}
+
+.pricing-card-service {
+  .pricing-card-service-item:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+  .pricing-card-service-item {
+    .pricing-card-service-text {
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+.pricing-card-footer {
+  margin-top: 2.8rem;
+  .pricing-card-btn {
+    padding: 1rem 5rem;
+  }
+}
+
+/******* Popular & Private Card vertically alignment *******/
+.popular-pricing-card {
+  .pricing-card-body {
+    .pricing-card-service-1 {
+      margin-top: 3.6rem;
+    }
+  }
+}
+
+.pricing-card-private {
+  .pricing-card-body {
+    .pricing-card-service {
+      margin-top: 3rem;
+    }
+  }
+  .pricing-card-footer {
+    margin-top: 7.8rem;
+  }
+}

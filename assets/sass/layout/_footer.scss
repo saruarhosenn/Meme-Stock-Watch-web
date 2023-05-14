@@ -1,0 +1,47 @@
+/*------ Footer CSS ------*/
+.f-content {
+  .f-content-title {
+    margin-bottom: 2rem;
+  }
+  .f-pages-menu {
+    .f-pages-item:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    .f-pages-item {
+      .f-pages-link {
+        text-transform: capitalize;
+        &:hover {
+          color: var(--text-color3);
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 0.1rem solid var(--text-color7);
+  margin-top: 5.5rem;
+  padding: 7rem 0 5rem;
+}
+
+.f-social {
+  .f-social-item:not(:last-child) {
+    margin-right: 1.1rem;
+  }
+  .f-social-item {
+    .f-social-link {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      &:hover {
+        background-color: var(--secondary-bg);
+        .f-social-icon {
+          path {
+            fill: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
+}

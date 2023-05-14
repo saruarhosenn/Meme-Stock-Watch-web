@@ -1,0 +1,46 @@
+/*------ Newsletter CSS ------*/
+.newsletter-section {
+  padding: 5.5rem 0;
+  .newsletter-circle {
+    width: 36rem;
+    height: 36rem;
+    border: 8rem solid var(--bg-color3);
+    position: absolute;
+    right: -19.5rem;
+    bottom: -11.0rem;
+    transform: rotate(120deg);
+  }
+}
+
+.newsletter-title-wrap {
+  .newsletter-title {
+    margin-top: 0.7rem;
+  }
+}
+
+.newsletter-form {
+  gap: 2rem;
+  margin: 1.7rem 0 2.6rem;
+  .newsletter-form-input {
+    max-width: 37.3rem;
+    height: 6.3rem;
+    font-family: var(--primary-font-400);
+    font-size: var(--size-xl);
+    color: var(--secondary-color);
+    border: 0.1rem solid var(--border-1);
+    padding: 2rem 1rem 2rem 2rem;
+    &::placeholder {
+      color: var(--primary-color);
+    }
+    &:focus {
+      border-color: var(--border-2);
+    }
+  }
+  .newsletter-form-btn {
+    padding: 1.5rem 5rem;
+    &:hover {
+      background-color: var(--primary-bg);
+      color: var(--secondary-color);
+    }
+  }
+}

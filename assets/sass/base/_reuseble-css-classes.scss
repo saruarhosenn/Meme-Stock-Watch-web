@@ -1,0 +1,46 @@
+/* 
+==================================
+Reuseble CSS Classes
+==================================
+*/
+.sec-y-space {
+  padding: 9rem 0;
+}
+
+.sec-t-space {
+  padding-top: 9rem;
+}
+
+.sec-b-space {
+  padding-bottom: 9rem;
+}
+
+.rounded-18 {
+  border-radius: 1.6rem;
+}
+
+.rounded-10 {
+  border-radius: 1rem;
+}
+
+.rounded-8 {
+  border-radius: 0.8rem;
+}
+
+.t-linear {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+a,
+button,
+img,
+svg,
+svg path,
+span,
+.t-ease-in-out {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}

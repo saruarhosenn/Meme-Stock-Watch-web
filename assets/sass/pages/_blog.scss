@@ -1,0 +1,70 @@
+/* 
+=================================================
+Blog Page Style CSS
+=================================================
+*/
+.blog-section {
+  padding-top: 18rem;
+}
+
+.blog-row {
+    --bs-gutter-x: 3.9rem;
+    --bs-gutter-y: 3.9rem;
+}
+
+.blog-title-wrap {
+   margin-bottom: 6.5rem;
+}
+
+.blog-wrap {
+    .blog:not(:last-child) {
+        margin-bottom: 3.9rem;
+    }
+}
+
+.blog {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 0.4rem;
+  .blog-header {
+    .blog-header-img {
+      border-radius: 0.4rem;
+    }
+  }
+  .blog-body {
+    margin-top: 4rem;
+    padding: 4rem 4rem 0;
+    .blog-body-title {
+      margin: 1rem 0 2.4rem;
+    }
+    .blog-body-desc {
+      margin-bottom: 3.3rem;
+    }
+    .blog-body-date {
+        .blog-body-date-item:not(:last-child) {
+            margin-right: 1.1rem;
+        }
+    }
+  }
+}
+
+.blog {
+  .blog-footer {
+    margin-top: 3.3rem;
+    padding: 0 4rem 4rem;
+    .blog-footer-item:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+.blog-btn-wrap {
+    margin-top: 10rem;
+    .blog-btn {
+        width: 100%;
+        max-width: 38.8rem;
+        padding: 1.9rem;
+        &:hover {
+            background-color: var(--bg-color3);
+        }
+    }
+}

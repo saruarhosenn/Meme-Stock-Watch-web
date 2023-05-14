@@ -1,0 +1,63 @@
+/* 
+=================================================
+Contact Page Style CSS
+=================================================
+*/
+.contact-section {
+  padding: 18rem 0 8rem;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 54.5rem;
+}
+
+.contact-row {
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2rem;
+}
+
+.contact-title-wrap {
+  margin-bottom: 4rem;
+  .contact-title {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-form {
+  .contact-form-input {
+    font-family: var(--primary-font-400);
+    font-size: var(--size-xl);
+    color: var(--secondary-color);
+    padding: 2rem;
+    height: 7rem;
+    border: 0.1rem solid var(--border-3);
+    &::placeholder {
+      color: var(--text-color12);
+    }
+  }
+  .contact-form-message {
+    height: 12rem;
+  }
+  .contact-form-btn {
+    padding: 1.1rem;
+    &:hover {
+      background-color: var(--bg-color5);
+    }
+  }
+}
+
+.contact-email {
+  margin-top: 8rem;
+  @media #{$sm} {
+    margin-top: 5rem;
+  }
+  .contact-email-link {
+    gap: 1.8rem;
+    &:hover {
+      .contact-email-text {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}

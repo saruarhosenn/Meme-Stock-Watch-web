@@ -1,0 +1,197 @@
+/* 
+=================================================
+Home Page Style CSS
+=================================================
+*/
+/******* Hero Section *******/
+.hero-section {
+  padding: 21.5rem 0 14.3rem;
+}
+
+.hero-content {
+  .hero-desc {
+    margin: 3.5rem 0 4.5rem;
+  }
+  .hero-btn {
+    gap: 1.6rem;
+  }
+}
+
+.hero-img {
+  .hero-main-img {
+    animation: zump 4s infinite linear;
+  }
+}
+
+@keyframes zump {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, -3rem, 0);
+    transform: translate3d(0, -3rem, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/****** Stock Forecasting Section ******/
+.stock-forecasting-section {
+  padding: 6rem 0;
+}
+
+.stock-forecasting-grid {
+  --bs-gutter-x: 6rem;
+  --bs-gutter-y: 6rem;
+  > * {
+    width: 20%;
+  }
+}
+.stock-forecasting-card {
+  padding: 1.6rem 1.9rem;
+  .stock-forecasting-card-counter {
+    margin-top: 1.9rem;
+    @media #{$xsm} {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+  .stock-forecasting-card-color-text {
+    @media #{$xsm} {
+      font-size: var(--size-2xl);
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+/******* Why Mem Stock Section *******/
+.why-mem-stock-title-wrap {
+  margin-bottom: 6rem;
+  .why-mem-stock-title {
+    margin-bottom: 1rem;
+  }
+  .why-mem-stock-desc {
+    width: 100%;
+    max-width: 80.6rem;
+  }
+}
+
+.why-mem-stock-row {
+  --bs-gutter-x: 6rem;
+  --bs-gutter-y: 6rem;
+}
+
+.why-mem-stock-card {
+  .why-mem-stock-card-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+  .why-mem-stock-card-title {
+    margin: 3.5rem 0 2.5rem;
+  }
+}
+
+.fatures-row {
+  --bs-gutter-x: 6rem;
+  --bs-gutter-y: 6rem;
+}
+
+.fatures-text {
+  .fatures-title {
+    margin-bottom: 4.9rem;
+  }
+  .fatures-list {
+    .fatures-list-item:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    .fatures-list-item {
+      .fatures-list-icon {
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}
+
+/******* Testimonial Section *******/
+.testimonial-title-wrap {
+  margin-bottom: 10rem;
+  .testimonial-top-title {
+    margin-bottom: 2.5rem;
+  }
+  .testimonial-title {
+    width: 100%;
+    max-width: 102rem;
+  }
+}
+
+.testimonial-slider {
+  .owl-item {
+    img {
+      display: inline-block;
+      width: auto;
+    }
+  }
+  .owl-nav {
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .owl-prev,
+    .owl-next {
+      position: relative;
+      margin: 0 4rem;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      & span {
+        display: none;
+      }
+    }
+    .owl-prev::before {
+      left: 0;
+      background: url("../images/testimonial/arrow-left.svg") no-repeat center /
+        2.5rem 2.5rem;
+    }
+    .owl-next::before {
+      right: 0;
+      background: url("../images/testimonial/arrow-right.svg") no-repeat center /
+        2.5rem 2.5rem;
+    }
+  }
+}
+
+.testimonial-item {
+  .testimonial-quote {
+    max-width: 14.5rem;
+  }
+  .testimonial-desc {
+    margin: 6rem 0;
+  }
+  .testimonial-user {
+    .testimonial-user-img {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+    }
+    .testimonial-user-info {
+      margin-left: 1rem;
+      .testimonial-user-review {
+        .testimonial-user-star {
+          margin-top: 1rem;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}
