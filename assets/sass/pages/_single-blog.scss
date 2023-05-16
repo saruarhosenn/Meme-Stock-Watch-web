@@ -1,0 +1,160 @@
+/* 
+=================================================
+Single Blog Page Style CSS
+=================================================
+*/
+.mb-80 {
+  margin-bottom: 8rem;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+.mb-44 {
+  margin-bottom: 4.4rem;
+}
+
+.mb-27 {
+  margin-bottom: 2.7rem;
+}
+
+.update-bold-normal {
+  padding-left: 3rem;
+}
+
+.single-blog-wrap {
+  width: 100%;
+  max-width: 99.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-blog-section {
+  padding: 18rem 0 13rem;
+}
+
+.update-list-1 {
+  margin: 2rem 0 4.5rem;
+  gap: 1.8rem;
+}
+
+.update-list-2 {
+  margin: 6.9rem 0 5rem;
+  gap: 1.9rem;
+}
+
+.traveling-img-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.8rem;
+  .traveling-img-wrap {
+    overflow: hidden;
+    border-radius: 0.4rem;
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.single-blog-testimonial {
+  gap: 3.5rem;
+}
+
+.single-blog-ifarme-wrap {
+  .single-blog-ifarme {
+    width: 100%;
+    height: 56.4rem;
+  }
+}
+
+.single-blog-social {
+  .single-blog-social-item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+}
+
+.related-post {
+  overflow: hidden;
+  &:hover {
+    .related-post-img {
+      transform: scale(1.1);
+    }
+  }
+  .related-post-img-wrap {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    .related-post-category {
+      padding: 0.6rem 1.8rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .related-post-link:hover {
+    color: var(--text-color3);
+  }
+  .update-list-4 {
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.update-list-3 {
+  margin-top: 3.5rem;
+  gap: 3rem;
+}
+
+.related-post-row {
+  --bs-gutter-x: 5rem;
+  --bs-gutter-y: 5rem;
+}
+
+.post-comment-wrap {
+  gap: 4rem;
+  .post-comment-user {
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+  .post-comment-content {
+    flex-grow: 1;
+    .post-comment-date {
+      margin: 1.5rem 0 3.5rem;
+    }
+  }
+}
+
+.post-comment-box {
+  .post-comment-input {
+    height: 7.6rem;
+    border: 0.1rem solid var(--border-4);
+    padding: 2.6rem 1.5rem 2.6rem 3rem;
+    font-family: var(--primary-font-500);
+    font-size: var(--size-2xl);
+    color: var(--secondary-color);
+    &::placeholder {
+      color: var(--text-color12);
+    }
+    &:focus {
+      border-color: var(--border-2);
+    }
+  }
+  .post-comment-message {
+    height: 24rem;
+  }
+  .form-check {
+    .form-check-input,
+    .form-check-label {
+      cursor: pointer;
+    }
+  }
+  .post-comment-btn {
+    margin-top: 5rem;
+    padding: 1.9rem 4rem;
+    &:hover {
+      background-color: var(--bg-color3);
+    }
+  }
+}
