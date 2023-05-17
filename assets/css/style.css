@@ -78,6 +78,11 @@ Variables
   --border-4: #D7D7D7;
 }
 
+@media only screen and (max-width: 1199px) {
+  :root {
+    --size-xl: 1.4rem;
+  }
+}
 html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
@@ -900,6 +905,11 @@ Reuseble Layout CSS
 }
 
 /*------ Footer CSS ------*/
+@media only screen and (max-width: 400px) {
+  .footer-row > * {
+    width: 100%;
+  }
+}
 .f-content .f-content-title {
   margin-bottom: 2rem;
 }
@@ -919,7 +929,25 @@ Reuseble Layout CSS
   margin-top: 5.5rem;
   padding: 7rem 0 5rem;
 }
+@media only screen and (max-width: 670px) {
+  .footer-bottom {
+    padding: 4rem 0;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .footer-bottom .footer-bottom-row > * {
+    width: 100%;
+  }
+  .footer-bottom .footer-bottom-row .f-copyright {
+    text-align: center;
+  }
+}
 
+@media only screen and (max-width: 670px) {
+  .f-social {
+    justify-content: center !important;
+  }
+}
 .f-social .f-social-item:not(:last-child) {
   margin-right: 1.1rem;
 }
@@ -1110,6 +1138,47 @@ Home Page Style CSS
   margin-top: 1rem;
   width: 2rem;
   height: 2rem;
+}
+
+/******* Contact Section *******/
+.h-contact-section {
+  padding: 15rem 0;
+  background: linear-gradient(180deg, #001A35 0%, rgba(0, 26, 53, 0.66) 49.49%, #001A35 94.51%), url("../images/contact/contact-bg.jpg") no-repeat top/cover;
+}
+
+.h-contact-title {
+  margin: 3.5rem 0;
+}
+
+.h-contact-form {
+  padding: 8rem 6rem;
+}
+.h-contact-form .h-contact-input {
+  font-family: var(--primary-font-400);
+  font-size: var(--size-xl);
+  color: var(--secondary-color);
+  height: 7rem;
+  border: 0.1rem solid var(--border-3);
+  width: 100%;
+  padding: 2rem;
+}
+.h-contact-form .h-contact-input:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.h-contact-form .h-contact-input::placeholder {
+  color: var(--text-color12);
+}
+.h-contact-form .h-contact-input:focus {
+  border-color: var(--border-2);
+}
+.h-contact-form .h-contact-message {
+  height: 12rem;
+}
+.h-contact-form .h-contact-btn {
+  padding: 1.5rem;
+}
+.h-contact-form .h-contact-btn:hover {
+  background-color: var(--bg-color3);
 }
 
 /* 

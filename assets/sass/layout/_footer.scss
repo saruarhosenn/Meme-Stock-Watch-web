@@ -1,4 +1,12 @@
 /*------ Footer CSS ------*/
+@media only screen and (max-width: 400px) {
+  .footer-row {
+    > * {
+      width: 100%;
+    }
+  }
+}
+
 .f-content {
   .f-content-title {
     margin-bottom: 2rem;
@@ -23,9 +31,25 @@
   border-top: 0.1rem solid var(--text-color7);
   margin-top: 5.5rem;
   padding: 7rem 0 5rem;
+  @media only screen and (max-width: 670px) {
+    padding: 4rem 0;
+  }
+  @media only screen and (max-width: 670px) {
+    .footer-bottom-row {
+      > * {
+        width: 100%;
+      }
+      .f-copyright {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .f-social {
+  @media only screen and (max-width: 670px) {
+    justify-content: center !important;
+  }
   .f-social-item:not(:last-child) {
     margin-right: 1.1rem;
   }

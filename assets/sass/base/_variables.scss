@@ -80,3 +80,10 @@ Variables
   --border-3: #24EBA5;
   --border-4: #D7D7D7;
 }
+
+
+@media #{$lg} {
+  :root {
+    --size-xl: 1.4rem;
+  }
+}

@@ -195,3 +195,44 @@ Home Page Style CSS
     }
   }
 }
+
+/******* Contact Section *******/
+.h-contact-section {
+  padding: 15rem 0;
+  background: linear-gradient(180deg, #001A35 0%, rgba(0, 26, 53, 0.66) 49.49%, #001A35 94.51%), url("../images/contact/contact-bg.jpg") no-repeat top / cover;
+}
+
+.h-contact-title {
+  margin: 3.5rem 0;
+}
+
+.h-contact-form {
+  padding: 8rem 6rem;
+  .h-contact-input {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    font-family: var(--primary-font-400);
+    font-size: var(--size-xl);
+    color: var(--secondary-color);
+    height: 7rem;
+    border: 0.1rem solid var(--border-3);
+    width: 100%;
+    padding: 2rem;
+    &::placeholder {
+      color: var(--text-color12);
+    }
+    &:focus {
+      border-color: var(--border-2);
+    }
+  }
+  .h-contact-message {
+    height: 12rem;
+  }
+  .h-contact-btn {
+    padding: 1.5rem;
+    &:hover {
+      background-color: var(--bg-color3);
+    }
+  }
+}
