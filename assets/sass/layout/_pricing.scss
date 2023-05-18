@@ -4,25 +4,8 @@
 }
 
 .pricing-title {
-  .pricing-title-md::after {
-    content: "";
-    position: absolute;
-    bottom: -6rem;
-    right: 3.4rem;
-    width: 5.5rem;
-    height: 5.1rem;
-    background: url("../images/pricing/arrow-left.png") no-repeat top / 5.5rem
-      5.1rem;
-    @media #{$md} {
-      bottom: -5rem;
-    }
-    @media #{$sm} {
-      right: 3rem;
-    }
-    @media #{$xsm} {
-      right: 2.5rem;
-    }
-  }
+  width: 100%;
+  max-width: 82rem;
   @media #{$md} {
     .pricing-title-lg {
       font-size: 4.5rem;
@@ -181,6 +164,6 @@
     }
   }
   .pricing-card-footer {
-    margin-top: 7.8rem;
+    margin-top: 5.7rem;
   }
 }

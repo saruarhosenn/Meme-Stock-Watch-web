@@ -61,6 +61,8 @@ Variables
   --text-color12: #6B6B6B;
   --text-color13: #0D4C92;
   --text-color14: #D7D7D7;
+  --text-color15: #697386;
+  --text-color16: #8792A2;
   /*_________ BG Color _________*/
   --body-bg: #001A35;
   --primary-bg: #ffffff;
@@ -76,6 +78,7 @@ Variables
   --border-2: #001A35;
   --border-3: #24EBA5;
   --border-4: #D7D7D7;
+  --border-5: rgba(60, 66, 87, 0.12);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -362,6 +365,14 @@ Text Color
 
 .text-color14 {
   color: var(--text-color14);
+}
+
+.text-color15 {
+  color: var(--text-color15);
+}
+
+.text-color16 {
+  color: var(--text-color15);
 }
 
 /* 
@@ -654,29 +665,9 @@ Reuseble Layout CSS
   padding-top: 30rem;
 }
 
-.pricing-title .pricing-title-md::after {
-  content: "";
-  position: absolute;
-  bottom: -6rem;
-  right: 3.4rem;
-  width: 5.5rem;
-  height: 5.1rem;
-  background: url("../images/pricing/arrow-left.png") no-repeat top/5.5rem 5.1rem;
-}
-@media only screen and (max-width: 991px) {
-  .pricing-title .pricing-title-md::after {
-    bottom: -5rem;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .pricing-title .pricing-title-md::after {
-    right: 3rem;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .pricing-title .pricing-title-md::after {
-    right: 2.5rem;
-  }
+.pricing-title {
+  width: 100%;
+  max-width: 82rem;
 }
 @media only screen and (max-width: 991px) {
   .pricing-title .pricing-title-lg {
@@ -818,7 +809,7 @@ Reuseble Layout CSS
   margin-top: 3rem;
 }
 .pricing-card-private .pricing-card-footer {
-  margin-top: 7.8rem;
+  margin-top: 5.7rem;
 }
 
 /*------ FAQ CSS ------*/
@@ -1077,6 +1068,7 @@ Home Page Style CSS
 }
 .testimonial-title-wrap .testimonial-top-title {
   margin-bottom: 2.5rem;
+  letter-spacing: 0.5rem;
 }
 .testimonial-title-wrap .testimonial-title {
   width: 100%;
@@ -1463,6 +1455,233 @@ Contact Page Style CSS
 }
 .contact-email .contact-email-link:hover .contact-email-text {
   color: var(--secondary-color);
+}
+
+/* 
+=================================================
+Check Out Page Style CSS
+=================================================
+*/
+.check-out-row {
+  --bs-gutter-x: 19rem;
+  --bs-gutter-y: 6rem;
+}
+
+.box-style {
+  height: 4rem;
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border-5);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.check-out-arrow-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+}
+
+.check-out-left-col {
+  border-right: 0.1rem solid var(--border-5);
+}
+
+.check-out-select {
+  margin-top: 5rem;
+  gap: 1.4rem;
+}
+.check-out-select .check-out-select-que {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border: 0.1rem solid var(--border-3);
+}
+
+.check-out-select-box {
+  margin: 1.5rem 0;
+  padding: 1.3rem 1.2rem;
+  height: auto;
+  gap: 1.2rem;
+}
+
+.check-out-select-btn-wrap {
+  gap: 1.2rem;
+}
+
+.check-out-select-btn {
+  padding: 0.7rem 1.2rem;
+  border: 0.1rem solid var(--border-3);
+}
+.check-out-select-btn img {
+  margin-left: 0.5rem;
+}
+.check-out-select-btn:hover {
+  background-color: var(--secondary-bg);
+}
+.check-out-select-btn.active {
+  background-color: var(--secondary-bg);
+}
+
+.pay-wrap {
+  margin-top: 6rem;
+}
+.pay-wrap .pay-title {
+  margin-bottom: 1rem;
+}
+
+.basic-plan-wrap {
+  margin-top: 2.5rem;
+  gap: 1.4rem;
+}
+
+.basic-plan {
+  gap: 1.4rem;
+}
+.basic-plan .basic-plan-product-img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.basic-plan-select {
+  padding-left: 1rem;
+  padding-right: 3rem !important;
+  border: 0;
+  font-family: var(--primary-font-500);
+  font-size: var(--size-md);
+  padding-right: 2rem;
+  color: var(--secondary-color);
+  background-color: transparent;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+.basic-plan-select::after {
+  border-bottom: 1px solid var(--border-2);
+  border-right: 1px solid var(--border-2);
+  height: 0.7rem;
+  width: 0.7rem;
+  right: 1.2rem;
+  margin-top: -0.2rem;
+  transform: translateY(-50%) rotate(45deg);
+}
+.basic-plan-select.open::after {
+  transform: translateY(-50%) rotate(-135deg);
+  margin-top: -0.1rem;
+}
+.basic-plan-select .list {
+  background-color: var(--primary-bg);
+  border-radius: 0.4rem;
+  box-shadow: 0px 10.6296px 11.6926px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+.basic-plan-select .option {
+  font-family: var(--primary-font-500);
+  font-size: var(--size-md);
+  color: var(--secondary-color);
+  line-height: 2.8rem;
+  min-height: 2.8rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.pay-form-select {
+  padding-left: 1.2rem;
+  border: 0.1rem solid var(--border-5);
+  font-family: var(--primary-font-500);
+  font-size: var(--size-xl);
+  color: var(--text-color8);
+  background-color: var(--primary-bg);
+  height: 4rem;
+  line-height: 4rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.pay-form-select::after {
+  border-bottom: 2px solid var(--border-2);
+  border-right: 2px solid var(--border-2);
+  height: 1rem;
+  width: 1rem;
+  right: 1.2rem;
+}
+.pay-form-select .option {
+  font-family: var(--primary-font-500);
+  font-size: var(--size-xl);
+  color: var(--secondary-color);
+  line-height: 3.5rem;
+  min-height: 3.5rem;
+}
+
+.product-amount {
+  margin-top: 2.5rem;
+  max-width: 25.7rem;
+}
+.product-amount .product-amount-wrap {
+  border-bottom: 1px solid rgba(60, 66, 87, 0.12);
+  padding: 1.2rem 0;
+}
+
+.check-out-footer {
+  margin-top: 6rem;
+  gap: 1.8rem;
+}
+
+.pay-top-wrap .pay-top-btn {
+  padding: 1.2rem;
+}
+.pay-top-wrap .pay-top-text {
+  margin: 3.2rem 0;
+  gap: 0.4rem;
+}
+.pay-top-wrap .pay-top-text .pay-top-hr {
+  border: 0;
+  border-bottom: 0.1rem solid var(--border-5);
+  flex-grow: 1;
+}
+
+.pay-form-row {
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2rem;
+}
+
+.pay-form label {
+  margin-bottom: 0.8rem;
+}
+.pay-form .pay-form-input {
+  font-family: var(--primary-font-400);
+  font-size: var(--size-xl);
+  color: var(--secondary-color);
+}
+.pay-form .pay-form-input::placeholder {
+  color: var(--text-color16);
+}
+.pay-form .pay-form-input:focus {
+  border-color: var(--border-3);
+}
+.pay-form .pay-form-input-card1 {
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.pay-form .pay-form-input-card2 {
+  border-radius: 0 0 0 0.8rem;
+}
+.pay-form .pay-form-input-card3 {
+  border-radius: 0 0 0.8rem 0;
+}
+.pay-form .pay-form-input-card4 {
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+.pay-form .pay-form-cards {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+}
+.pay-form .pay-form-btn {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+.pay-form .pay-form-btn:hover {
+  background-color: var(--bg-color5);
 }
 
 /*# sourceMappingURL=style.css.map */
