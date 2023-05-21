@@ -10,21 +10,19 @@ $sm: "only screen and (max-width: 767px)";
 $xsm: "only screen and (max-width: 575px)";
 
 @media #{$xl} {
-  
 }
 
 @media #{$lg} {
-  
 }
 
 @media #{$md} {
-  
 }
 
 @media #{$sm} {
-  
 }
 
 @media #{$xsm} {
-  
+}
+
+@media only screen and (max-width: 360px) {
 }

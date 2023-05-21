@@ -42,20 +42,19 @@
 	  =====================================================
 	-->
   <header class="sticky-header bg-color3">
-    <div class="sidebar-overlay"></div>
     <nav class="container">
       <div class="row align-items-center">
         <!-- ******** Header Logo ******** -->
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-lg-2 col-sm-6 col-9">
           <a href="index.html" class="header-logo d-block">
             <img src="assets/images/logo/logo.png" alt="logo" class="img-fluid">
           </a>
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-6 col-lg-7" id="sidebar">
           <!-- ******** Main Menu ******** -->
-          <div class="main-menu d-flex align-items-center justify-content-center">
-            <!-- ***** Pages Menu Item ***** -->
-            <ul class="menu d-flex align-items-center">
+          <div class="main-menu sidebar-menu d-flex align-items-center justify-content-lg-center">
+            <img src="assets/images/icons/closed.svg" alt="closed" class="sidebar-closed-icon d-inline-block d-lg-none">
+            <ul class="menu d-lg-flex align-items-center justify-content-center">
               <li class="menu-item">
                 <a href="index.html" class="menu-link primary-font-600 size-xl primary-color text-capitalize">Home</a>
               </li>
@@ -76,10 +75,16 @@
               <li class="menu-item">
                 <a href="#faq" class="menu-link primary-font-600 size-xl primary-color text-capitalize">FAQ</a>
               </li>
+              <li class="menu-item menu-btn-item menu-btn-item-1 d-block d-lg-none">
+                <a href="#" class="menu-btn-link primary-font-500 size-xl primary-color rounded-8">Log in</a>
+              </li>
+              <li class="menu-item menu-btn-item menu-btn-item-2 d-block d-lg-none">
+                <a href="#" class="menu-btn-link bg-btn">Sign up</a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="col-xl-3">
+        <div class="col-lg-3 d-none d-lg-block">
           <!-- ***** Header Button ***** -->
           <ul class="menu-btn menu d-flex align-items-center justify-content-end">
             <li class="menu-btn-item menu-btn-item-1">
@@ -89,6 +94,13 @@
               <a href="#" class="menu-btn-link bg-btn">Sign up</a>
             </li>
           </ul>
+        </div>
+        <div class="col-sm-6 col-3 d-block d-lg-none">
+          <div class="sidebar-toggler">
+            <div class="sidebar-toggler-line"></div>
+            <div class="sidebar-toggler-line"></div>
+            <div class="sidebar-toggler-line"></div>
+          </div>
         </div>
       </div>
     </nav>
@@ -108,7 +120,7 @@
     <section class="hero-section bg-color3">
       <div class="container">
         <!----- Start row ----->
-        <div class="row g-5 align-items-center">
+        <div class="row g-5 hero-row align-items-center">
           <article class="col-lg-6">
             <div class="hero-content">
               <h1 class="hero-title primary-font-700 size-12xl primary-color">Data-Driven <span
@@ -214,7 +226,7 @@
         </div>
         <!----- Start row ----->
         <div class="row why-mem-stock-row">
-          <article class="col-lg-4">
+          <article class="col-lg-4 col-sm-6">
             <div class="why-mem-stock-card">
               <div
                 class="why-mem-stock-card-icon d-flex align-items-center justify-content-center secondary-bg rounded-10">
@@ -228,7 +240,7 @@
               </p>
             </div>
           </article>
-          <article class="col-lg-4">
+          <article class="col-lg-4 col-sm-6">
             <div class="why-mem-stock-card">
               <div
                 class="why-mem-stock-card-icon d-flex align-items-center justify-content-center secondary-bg rounded-10">
@@ -239,7 +251,7 @@
               <p class="why-mem-stock-card-desc primary-font-400 size-2xl text-color9">Stay ahead of the game with our intuitive user dashboard. Access real-time updates, forecasts, and more - all in one place, right at your fingertips!</p>
             </div>
           </article>
-          <article class="col-lg-4">
+          <article class="col-lg-4 col-sm-6">
             <div class="why-mem-stock-card">
               <div
                 class="why-mem-stock-card-icon d-flex align-items-center justify-content-center secondary-bg rounded-10">
@@ -268,47 +280,47 @@
     <section class="fatures-section sec-b-space">
       <div class="container">
         <!----- Start row ----->
-        <div class="row fatures-row align-items-center">
-          <article class="col-lg-7">
+        <div class="row fatures-row align-items-xl-center">
+          <article class="col-xl-7 col-lg-6">
             <div class="fatures-img">
               <img src="assets/images/fatures/fatures.png" alt="fatures" class="fatures-main-img img-fluid">
             </div>
           </article>
-          <article class="col-lg-5">
+          <article class="col-xl-5 col-lg-6">
             <div class="fatures-text">
               <h2 class="fatures-title primary-font-600 size-11xl primary-color">Unmatched value, tailored for your <span class="text-color3">success.</span></h2>
               <ul class="fatures-list">
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Daily Updates Via Videos, Texts,
                     and Charts</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">LDPM - (Liquidity-Driven Price
                     Movements)</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Elliott Wave Forecasts</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Options Positioning Insights</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Dynamic Fibonacci Levels</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Gamma Hedging Heat Maps</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Voex Analysis</p>
                 </li>
-                <li class="fatures-list-item d-flex align-items-center">
+                <li class="fatures-list-item d-flex">
                   <img src="assets/images/fatures/right.svg" alt="right" class="fatures-list-icon">
                   <p class="fatures-list-text primary-font-400 size-2xl primary-color">Strucural Invalidation Levels</p>
                 </li>
@@ -1164,7 +1176,7 @@
 		  Start FAQ Section 
 		  =====================================================
 		-->
-    <section class="faq-section bg-color3 sec-y-space" id="faq">
+    <section class="faq-section bg-color3 sec-b-space" id="faq">
       <div class="container">
         <div class="faq-title-wrap text-center">
           <h2 class="faq-title primary-font-700 size-12xl primary-color">FAQ</h2>
@@ -1384,7 +1396,7 @@
 		  Start Contact Section 
 		  =====================================================
 		-->
-    <section class="h-contact-section">
+    <section class="h-contact-section sec-y-space">
       <div class="container">
         <!----- Start row ----->
         <div class="row g-5 align-items-center">
@@ -1433,7 +1445,7 @@
           <p class="primary-font-400 size-2xl text-color8">*You can unsubscribe anytime</p>
         </div>
       </div>
-      <div class="newsletter-circle rounded-circle"></div>
+      <div class="newsletter-circle rounded-circle d-none d-md-block"></div>
     </section>
     <!-- 
 		  =====================================================
@@ -1597,10 +1609,12 @@
 	  Back To Top Btn
 	  ------------------------------------------------
 	-->
-  <button type="button" id="scroll-up-btn" title="Go to top"
-    class="d-flex align-items-center justify-content-center rounded">
-    <img src="assets/images/icons/arrow-up.svg" alt="arrow-up" />
-  </button>
+  <div class="scroll-up-btn" title="Go to top">
+    <img src="assets/images/icons/arrow-up.svg" class="arrow-up" alt="arrow-up" />
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
   <!-- 
 	  ------------------------------------------------
 	  Back To Top Btn
@@ -1616,6 +1630,7 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/backToTop.js"></script>
 </body>
 
 </html>

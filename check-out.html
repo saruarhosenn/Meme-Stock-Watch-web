@@ -244,10 +244,12 @@
 	  Back To Top Btn
 	  ------------------------------------------------
 	-->
-  <button type="button" id="scroll-up-btn" title="Go to top"
-    class="d-flex align-items-center justify-content-center rounded">
-    <img src="assets/images/icons/arrow-up.svg" alt="arrow-up" />
-  </button>
+  <div class="scroll-up-btn" title="Go to top">
+    <img src="assets/images/icons/arrow-up.svg" class="arrow-up" alt="arrow-up" />
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
   <!-- 
 	  ------------------------------------------------
 	  Back To Top Btn
@@ -261,10 +263,7 @@
   <script src="assets/js/jquery.nice-select.min.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    /* ===== Nice Select JS ===== */
-  $(".basic-plan-select, .pay-form-select").niceSelect();
-  </script>
+  <script src="assets/js/backToTop.js"></script>
 </body>
 
 </html>

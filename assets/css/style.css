@@ -48,42 +48,72 @@ Variables
   */
   /*________ Text Color ________*/
   --primary-color: #ffffff;
-  --secondary-color: #001A35;
-  --text-color3: #24EBA5;
+  --secondary-color: #001a35;
+  --text-color3: #24eba5;
   --text-color4: #000000;
   --text-color5: #083038;
-  --text-color6: #231D4F;
+  --text-color6: #231d4f;
   --text-color7: #848199;
-  --text-color8: #1E1E1E;
-  --text-color9: #B1B1B5;
-  --text-color10: #E54322;
+  --text-color8: #1e1e1e;
+  --text-color9: #b1b1b5;
+  --text-color10: #e54322;
   --text-color11: rgba(8, 48, 56, 0.5);
-  --text-color12: #6B6B6B;
-  --text-color13: #0D4C92;
-  --text-color14: #D7D7D7;
+  --text-color12: #6b6b6b;
+  --text-color13: #0d4c92;
+  --text-color14: #d7d7d7;
   --text-color15: #697386;
-  --text-color16: #8792A2;
+  --text-color16: #8792a2;
   /*_________ BG Color _________*/
-  --body-bg: #001A35;
+  --body-bg: #001a35;
   --primary-bg: #ffffff;
-  --secondary-bg: #24EBA5;
-  --bg-color3: #001A35;
-  --bg-color4: #2F3142;
-  --bg-color5: #002C5A;
-  --bg-color6: #0D4C92;
-  --bg-color7: #5865F2;
-  --bg-color8: #6C79FF;
+  --secondary-bg: #24eba5;
+  --bg-color3: #001a35;
+  --bg-color4: #2f3142;
+  --bg-color5: #002c5a;
+  --bg-color6: #0d4c92;
+  --bg-color7: #5865f2;
+  --bg-color8: #6c79ff;
   /*_________ Border Color _________*/
   --border-1: #ffffff;
-  --border-2: #001A35;
-  --border-3: #24EBA5;
-  --border-4: #D7D7D7;
+  --border-2: #001a35;
+  --border-3: #24eba5;
+  --border-4: #d7d7d7;
   --border-5: rgba(60, 66, 87, 0.12);
 }
 
+@media only screen and (max-width: 1399px) {
+  :root {
+    --size-12xl: 5rem;
+    --size-7xl: 2.2rem;
+    --size-6xl: 2rem;
+    --size-5xl: 1.8rem;
+  }
+}
 @media only screen and (max-width: 1199px) {
   :root {
+    --size-12xl: 4.3rem;
+    --size-11xl: 3rem;
+    --size-8xl: 2.2rem;
+    --size-7xl: 2rem;
+    --size-6xl: 1.8rem;
+    --size-5xl: 1.6rem;
+    --size-4xl: 1.8rem;
+    --size-2xl: 1.6rem;
     --size-xl: 1.4rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    --size-12xl: 3.5rem;
+    --size-7xl: 1.8rem;
+    --size-3xl: 1.8rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  :root {
+    --size-12xl: 3rem;
+    --size-7xl: 1.6rem;
+    --size-4xl: 1.7rem;
   }
 }
 html {
@@ -418,15 +448,30 @@ Reuseble CSS Classes
 ==================================
 */
 .sec-y-space {
-  padding: 9rem 0;
+  padding: 10rem 0;
+}
+@media only screen and (max-width: 575px) {
+  .sec-y-space {
+    padding: 8rem 0;
+  }
 }
 
 .sec-t-space {
-  padding-top: 9rem;
+  padding-top: 10rem;
+}
+@media only screen and (max-width: 575px) {
+  .sec-t-space {
+    padding-top: 8rem;
+  }
 }
 
 .sec-b-space {
-  padding-bottom: 9rem;
+  padding-bottom: 10rem;
+}
+@media only screen and (max-width: 575px) {
+  .sec-b-space {
+    padding-bottom: 8rem;
+  }
 }
 
 .rounded-18 {
@@ -549,6 +594,18 @@ Reuseble Components
   border-radius: 0.8rem;
   padding: 1.4rem 3.2rem;
 }
+@media only screen and (max-width: 1199px) {
+  .border-btn,
+  .bg-btn {
+    padding: 1.4rem 2rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .border-btn,
+  .bg-btn {
+    padding: 1.1rem 2.5rem;
+  }
+}
 
 .border-btn {
   color: var(--primary-color);
@@ -571,15 +628,46 @@ Reuseble Components
   background-color: transparent;
 }
 
-#scroll-up-btn {
-  opacity: 0;
+.scroll-up-btn {
+  position: relative;
   position: fixed;
-  bottom: 3rem;
   right: 3rem;
-  z-index: 999;
-  background-color: var(--secondary-bg);
-  width: 3.5rem;
-  height: 3.5rem;
+  bottom: 3rem;
+  height: 4.6rem;
+  width: 4.6rem;
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(95, 58, 252, 0.4);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1.5rem);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.scroll-up-btn.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-up-btn .arrow-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.scroll-up-btn svg path {
+  fill: none;
+}
+.scroll-up-btn svg.progress-circle path {
+  stroke: #ee2852;
+  stroke-width: 5;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 /* 
@@ -595,26 +683,129 @@ Reuseble Layout CSS
   left: 0;
   padding: 2rem 0;
 }
+@media only screen and (max-width: 991px) {
+  .sticky-header {
+    padding: 1rem 0;
+  }
+}
 
-.main-menu .menu:not(:last-child) {
-  margin-right: 9rem;
+.main-menu .sidebar-closed-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
 .main-menu .menu .menu-item:not(:last-child) {
   margin-right: 3.6rem;
 }
+@media only screen and (max-width: 991px) {
+  .main-menu .menu .menu-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.8rem;
+  }
+}
 .main-menu .menu .menu-item .menu-link:hover {
   color: var(--text-color3);
+}
+@media only screen and (max-width: 991px) {
+  .main-menu .contact-menu .menu-item .menu-link {
+    color: var(--primary-color);
+  }
 }
 
 .menu-btn .menu-btn-item:not(:last-child) {
   margin-right: 1rem;
 }
-.menu-btn .menu-btn-item-1 .menu-btn-link {
+
+.menu-btn-item-1 .menu-btn-link {
   padding: 1.4rem 3.2rem;
 }
-.menu-btn .menu-btn-item-1 .menu-btn-link:hover {
+@media only screen and (max-width: 1199px) {
+  .menu-btn-item-1 .menu-btn-link {
+    padding: 1.4rem 2rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .menu-btn-item-1 .menu-btn-link {
+    border: 0.1rem solid var(--border-3);
+    padding: 1.1rem 2.5rem;
+  }
+}
+.menu-btn-item-1 .menu-btn-link:hover {
   color: var(--secondary-color);
   background-color: var(--secondary-bg);
+}
+
+@media only screen and (max-width: 991px) {
+  #sidebar {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, visibility 0.2s ease, transform 0.4s linear;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* hide scrollbar but allow scrolling */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  #sidebar::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  #sidebar.show {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .sidebar-menu {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    padding: 2rem;
+    min-width: 32rem;
+    height: 100%;
+    background-color: var(--bg-color3);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* hide scrollbar but allow scrolling */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .sidebar-menu::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}
+@media only screen and (max-width: 991px) and (max-width: 375px) {
+  .sidebar-menu {
+    min-width: 30rem;
+  }
+}
+.sidebar-toggler {
+  cursor: pointer;
+  width: 3.5rem;
+  margin-left: auto;
+}
+.sidebar-toggler .sidebar-toggler-line {
+  height: 0.2rem;
+  background-color: var(--primary-bg);
+  margin: 0.7rem 0;
+}
+
+.contact-sidebar-toggler .sidebar-toggler-line {
+  background-color: var(--bg-color3);
 }
 
 /*** Contac Header ****/
@@ -664,28 +855,32 @@ Reuseble Layout CSS
 .pricing-sec {
   padding-top: 30rem;
 }
+@media only screen and (max-width: 1399px) {
+  .pricing-sec {
+    padding-top: 23rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .pricing-sec {
+    padding-top: 22rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .pricing-sec {
+    padding-top: 18rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .pricing-sec {
+    padding-top: 16rem;
+  }
+}
 
 .pricing-title {
   width: 100%;
   max-width: 82rem;
 }
-@media only screen and (max-width: 991px) {
-  .pricing-title .pricing-title-lg {
-    font-size: 4.5rem;
-  }
-  .pricing-title .pricing-title-md {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .pricing-title .pricing-title-lg {
-    font-size: 3.5rem;
-  }
-  .pricing-title .pricing-title-md {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 400px) {
   .pricing-title .pricing-title-lg {
     font-size: 3rem;
   }
@@ -697,6 +892,11 @@ Reuseble Layout CSS
 .pricing-tab {
   margin: 5.5rem 0;
   overflow: hidden;
+}
+@media only screen and (max-width: 575px) {
+  .pricing-tab {
+    margin: 4rem 0;
+  }
 }
 .pricing-tab .pricing-tablinks {
   padding: 1.2rem 2.5rem;
@@ -738,7 +938,7 @@ Reuseble Layout CSS
   }
 }
 .pricing-card {
-  padding: 3.6rem 3.6rem 4.6rem;
+  padding: 3.6rem 3rem 4.6rem;
   border-radius: 2.3rem;
   transition: all 0.4s linear;
 }
@@ -806,15 +1006,47 @@ Reuseble Layout CSS
 }
 
 .pricing-card-private .pricing-card-body .pricing-card-service {
-  margin-top: 3rem;
+  margin-top: 4rem;
+}
+@media only screen and (max-width: 1399px) {
+  .pricing-card-private .pricing-card-body .pricing-card-service {
+    margin-top: 3rem;
+  }
+}
+.pricing-card-private .pricing-card-body .pricing-card-service .pricing-card-service-item:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+@media only screen and (max-width: 1399px) {
+  .pricing-card-private .pricing-card-body .pricing-card-service .pricing-card-service-item:not(:last-child) {
+    margin-top: 1.4rem;
+  }
 }
 .pricing-card-private .pricing-card-footer {
-  margin-top: 5.7rem;
+  margin-top: 7rem;
+}
+@media only screen and (max-width: 1399px) {
+  .pricing-card-private .pricing-card-footer {
+    margin-top: 3.8rem;
+  }
 }
 
 /*------ FAQ CSS ------*/
+.faq-section {
+  padding-top: 4rem;
+}
+@media only screen and (max-width: 575px) {
+  .faq-section {
+    padding-top: 2rem;
+  }
+}
+
 .faq-title-wrap .faq-title {
   margin-bottom: 6.4rem;
+}
+@media only screen and (max-width: 575px) {
+  .faq-title-wrap .faq-title {
+    margin-bottom: 4rem;
+  }
 }
 
 .faq-row {
@@ -832,16 +1064,37 @@ Reuseble Layout CSS
   padding: 2.5rem 2.5rem 2.5rem;
   border-radius: 1.6rem !important;
 }
+@media only screen and (max-width: 1399px) {
+  .accordion-i .accordion-button {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .accordion-i .accordion-button {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .accordion-i .accordion-button {
+    font-size: 1.8rem;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .accordion-i .accordion-button {
+    padding: 1.5rem;
+  }
+}
 .accordion-i .accordion-button:not(.collapsed) {
   background-color: transparent;
   box-shadow: 0 0 0 transparent;
 }
 .accordion-i .accordion-button::after {
   flex-shrink: 0;
-  width: 4.1rem;
-  height: 4.1rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-image: url("../images/icons/plus.svg");
-  background-size: 4.1rem;
+  background-size: 3.5rem;
 }
 .accordion-i .accordion-button:not(.collapsed)::after {
   background-image: url("../images/icons/minus.svg");
@@ -854,6 +1107,11 @@ Reuseble Layout CSS
 .newsletter-section {
   padding: 5.5rem 0;
 }
+@media only screen and (max-width: 575px) {
+  .newsletter-section {
+    padding: 7rem 0;
+  }
+}
 .newsletter-section .newsletter-circle {
   width: 36rem;
   height: 36rem;
@@ -862,6 +1120,14 @@ Reuseble Layout CSS
   right: -19.5rem;
   bottom: -11rem;
   transform: rotate(120deg);
+  z-index: 1;
+}
+@media only screen and (max-width: 991px) {
+  .newsletter-section .newsletter-circle {
+    width: 33rem;
+    height: 33rem;
+    right: -22rem;
+  }
 }
 
 .newsletter-title-wrap .newsletter-title {
@@ -869,8 +1135,15 @@ Reuseble Layout CSS
 }
 
 .newsletter-form {
+  position: relative;
+  z-index: 11;
   gap: 2rem;
   margin: 1.7rem 0 2.6rem;
+}
+@media only screen and (max-width: 575px) {
+  .newsletter-form {
+    margin-top: 2.6rem;
+  }
 }
 .newsletter-form .newsletter-form-input {
   max-width: 37.3rem;
@@ -887,12 +1160,27 @@ Reuseble Layout CSS
 .newsletter-form .newsletter-form-input:focus {
   border-color: var(--border-2);
 }
+@media only screen and (max-width: 1199px) {
+  .newsletter-form .newsletter-form-input {
+    height: 5.8rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .newsletter-form .newsletter-form-input {
+    height: 5.4rem;
+  }
+}
 .newsletter-form .newsletter-form-btn {
   padding: 1.5rem 5rem;
 }
 .newsletter-form .newsletter-form-btn:hover {
   background-color: var(--primary-bg);
   color: var(--secondary-color);
+}
+@media only screen and (max-width: 767px) {
+  .newsletter-form .newsletter-form-btn {
+    padding: 1.2rem 4rem;
+  }
 }
 
 /*------ Footer CSS ------*/
@@ -963,6 +1251,27 @@ Home Page Style CSS
 .hero-section {
   padding: 21.5rem 0 14.3rem;
 }
+@media only screen and (max-width: 991px) {
+  .hero-section {
+    padding: 19rem 0 14rem;
+  }
+  .hero-section .hero-row {
+    --bs-gutter-y: 10rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-section {
+    padding: 16rem 0 9rem;
+  }
+  .hero-section .hero-row {
+    --bs-gutter-y: 9rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .hero-section {
+    padding: 15rem 0 8rem;
+  }
+}
 
 .hero-content .hero-desc {
   margin: 3.5rem 0 4.5rem;
@@ -998,8 +1307,35 @@ Home Page Style CSS
   --bs-gutter-x: 6rem;
   --bs-gutter-y: 6rem;
 }
+@media only screen and (max-width: 1399px) {
+  .stock-forecasting-grid {
+    --bs-gutter-x: 4rem;
+    --bs-gutter-y: 4rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .stock-forecasting-grid {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+  }
+}
 .stock-forecasting-grid > * {
   width: 20%;
+}
+@media only screen and (max-width: 991px) {
+  .stock-forecasting-grid > * {
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .stock-forecasting-grid > * {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .stock-forecasting-grid > * {
+    width: 100%;
+  }
 }
 
 .stock-forecasting-card {
@@ -1038,22 +1374,70 @@ Home Page Style CSS
   --bs-gutter-x: 6rem;
   --bs-gutter-y: 6rem;
 }
+@media only screen and (max-width: 1399px) {
+  .why-mem-stock-row {
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 5rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .why-mem-stock-row {
+    --bs-gutter-x: 4rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .why-mem-stock-row > * {
+    width: 100%;
+  }
+}
 
+@media only screen and (max-width: 640px) {
+  .why-mem-stock-card {
+    text-align: center;
+  }
+}
 .why-mem-stock-card .why-mem-stock-card-icon {
   width: 6rem;
   height: 6rem;
 }
+@media only screen and (max-width: 640px) {
+  .why-mem-stock-card .why-mem-stock-card-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .why-mem-stock-card .why-mem-stock-card-title {
   margin: 3.5rem 0 2.5rem;
+}
+@media only screen and (max-width: 640px) {
+  .why-mem-stock-card .why-mem-stock-card-title {
+    margin-top: 3rem;
+  }
 }
 
 .fatures-row {
   --bs-gutter-x: 6rem;
   --bs-gutter-y: 6rem;
 }
+@media only screen and (max-width: 1399px) {
+  .fatures-row {
+    --bs-gutter-x: 4rem;
+    --bs-gutter-y: 5rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .fatures-row {
+    --bs-gutter-x: 3rem;
+  }
+}
 
 .fatures-text .fatures-title {
   margin-bottom: 4.9rem;
+}
+@media only screen and (max-width: 1199px) {
+  .fatures-text .fatures-title {
+    margin-bottom: 3.5rem;
+  }
 }
 .fatures-text .fatures-list .fatures-list-item:not(:last-child) {
   margin-bottom: 1rem;
@@ -1061,10 +1445,27 @@ Home Page Style CSS
 .fatures-text .fatures-list .fatures-list-item .fatures-list-icon {
   margin-right: 1.2rem;
 }
+@media only screen and (max-width: 1199px) {
+  .fatures-text .fatures-list .fatures-list-item .fatures-list-icon {
+    margin-right: 0.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
 
 /******* Testimonial Section *******/
 .testimonial-title-wrap {
   margin-bottom: 10rem;
+}
+@media only screen and (max-width: 1199px) {
+  .testimonial-title-wrap {
+    margin-bottom: 8rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .testimonial-title-wrap {
+    margin-bottom: 6rem;
+  }
 }
 .testimonial-title-wrap .testimonial-top-title {
   margin-bottom: 2.5rem;
@@ -1084,6 +1485,11 @@ Home Page Style CSS
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 991px) {
+  .testimonial-slider .owl-nav {
+    margin-top: 3rem;
+  }
 }
 .testimonial-slider .owl-nav .owl-prev,
 .testimonial-slider .owl-nav .owl-next {
@@ -1115,8 +1521,23 @@ Home Page Style CSS
 .testimonial-item .testimonial-quote {
   max-width: 14.5rem;
 }
+@media only screen and (max-width: 1399px) {
+  .testimonial-item .testimonial-quote {
+    max-width: 8rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .testimonial-item .testimonial-quote {
+    max-width: 6rem;
+  }
+}
 .testimonial-item .testimonial-desc {
   margin: 6rem 0;
+}
+@media only screen and (max-width: 1399px) {
+  .testimonial-item .testimonial-desc {
+    margin: 3rem 0;
+  }
 }
 .testimonial-item .testimonial-user .testimonial-user-img {
   width: 10rem;
@@ -1134,16 +1555,35 @@ Home Page Style CSS
 
 /******* Contact Section *******/
 .h-contact-section {
-  padding: 15rem 0;
-  background: linear-gradient(180deg, #001A35 0%, rgba(0, 26, 53, 0.66) 49.49%, #001A35 94.51%), url("../images/contact/contact-bg.jpg") no-repeat top/cover;
+  background: linear-gradient(180deg, #001a35 0%, rgba(0, 26, 53, 0.66) 49.49%, #001a35 94.51%), url("../images/contact/contact-bg.jpg") no-repeat top/cover;
+}
+@media only screen and (max-width: 575px) {
+  .h-contact-section {
+    padding-top: 3rem;
+  }
 }
 
 .h-contact-title {
   margin: 3.5rem 0;
 }
+@media only screen and (max-width: 767px) {
+  .h-contact-title {
+    margin: 2.5rem 0;
+  }
+}
 
 .h-contact-form {
   padding: 8rem 6rem;
+}
+@media only screen and (max-width: 1199px) {
+  .h-contact-form {
+    padding: 5rem 4rem;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .h-contact-form {
+    padding: 3rem 2rem;
+  }
 }
 .h-contact-form .h-contact-input {
   font-family: var(--primary-font-400);
@@ -1163,6 +1603,11 @@ Home Page Style CSS
 .h-contact-form .h-contact-input:focus {
   border-color: var(--border-2);
 }
+@media only screen and (max-width: 575px) {
+  .h-contact-form .h-contact-input {
+    height: 5rem;
+  }
+}
 .h-contact-form .h-contact-message {
   height: 12rem;
 }
@@ -1171,6 +1616,11 @@ Home Page Style CSS
 }
 .h-contact-form .h-contact-btn:hover {
   background-color: var(--bg-color3);
+}
+@media only screen and (max-width: 575px) {
+  .h-contact-form .h-contact-btn {
+    padding: 1rem;
+  }
 }
 
 /* 

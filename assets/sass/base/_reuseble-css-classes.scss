@@ -4,15 +4,24 @@ Reuseble CSS Classes
 ==================================
 */
 .sec-y-space {
-  padding: 9rem 0;
+  padding: 10rem 0;
+  @media #{$xsm} {
+  padding: 8rem 0;
+  }
 }
 
 .sec-t-space {
-  padding-top: 9rem;
+  padding-top: 10rem;
+  @media #{$xsm} {
+    padding-top: 8rem;
+  }
 }
 
 .sec-b-space {
-  padding-bottom: 9rem;
+  padding-bottom: 10rem;
+  @media #{$xsm} {
+    padding-bottom: 8rem;
+  }
 }
 
 .rounded-18 {

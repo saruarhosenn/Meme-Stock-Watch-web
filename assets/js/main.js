@@ -12,6 +12,9 @@
     }
   });
 
+  /* ===== Nice Select JS ===== */
+  $(".basic-plan-select, .pay-form-select").niceSelect();
+
   /* ===== Counter Up JS ===== */
   $(".counter").counterUp({
     delay: 10,
@@ -21,8 +24,8 @@
   /* ===== Testimonial Silder JS ===== */
   $(".testimonial-slider").owlCarousel({
     loop: true,
-    items: 2,
-    margin: 90,
+    items: 1,
+    margin: 0,
     nav: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -31,13 +34,11 @@
     autoplayHoverPause: true,
     navSpeed: 2000,
     responsive: {
-      0: {
+      992: {
         items: 2,
+        margin: 70,
       },
-      600: {
-        items: 2,
-      },
-      1000: {
+      1200: {
         items: 2,
         margin: 90,
       },

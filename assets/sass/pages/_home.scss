@@ -6,6 +6,21 @@ Home Page Style CSS
 /******* Hero Section *******/
 .hero-section {
   padding: 21.5rem 0 14.3rem;
+  @media #{$md} {
+    padding: 19rem 0 14rem;
+    .hero-row {
+      --bs-gutter-y: 10rem;
+    }
+  }
+  @media #{$sm} {
+    padding: 16rem 0 9rem;
+    .hero-row {
+      --bs-gutter-y: 9rem;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    padding: 15rem 0 8rem;
+  } 
 }
 
 .hero-content {
@@ -47,8 +62,25 @@ Home Page Style CSS
 .stock-forecasting-grid {
   --bs-gutter-x: 6rem;
   --bs-gutter-y: 6rem;
+  @media #{$xl} {
+    --bs-gutter-x: 4rem;
+    --bs-gutter-y: 4rem;
+  }
+  @media #{$lg} {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+  }
   > * {
     width: 20%;
+    @media #{$md} {
+      width: 33.33%;
+    }
+    @media #{$xsm} {
+      width: 50%;
+    }
+    @media only screen and (max-width: 360px) {
+      width: 100%;
+    }
   }
 }
 .stock-forecasting-card {
@@ -84,26 +116,58 @@ Home Page Style CSS
 .why-mem-stock-row {
   --bs-gutter-x: 6rem;
   --bs-gutter-y: 6rem;
+  @media #{$xl} {
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 5rem;
+  }
+  @media #{$lg} {
+    --bs-gutter-x: 4rem;
+  }
+  @media only screen and (max-width: 640px) {
+    > * {
+      width: 100%;
+    }
+  }
 }
 
 .why-mem-stock-card {
+  @media only screen and (max-width: 640px) {
+    text-align: center;
+  }
   .why-mem-stock-card-icon {
     width: 6rem;
     height: 6rem;
+    @media only screen and (max-width: 640px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .why-mem-stock-card-title {
     margin: 3.5rem 0 2.5rem;
+    @media only screen and (max-width: 640px) {
+      margin-top: 3rem;
+    }
   }
 }
 
 .fatures-row {
   --bs-gutter-x: 6rem;
   --bs-gutter-y: 6rem;
+  @media #{$xl} {
+    --bs-gutter-x: 4rem;
+    --bs-gutter-y: 5rem;
+  }
+  @media #{$lg} {
+    --bs-gutter-x: 3rem;
+  }
 }
 
 .fatures-text {
   .fatures-title {
     margin-bottom: 4.9rem;
+    @media #{$lg} {
+      margin-bottom: 3.5rem;
+    }
   }
   .fatures-list {
     .fatures-list-item:not(:last-child) {
@@ -112,6 +176,11 @@ Home Page Style CSS
     .fatures-list-item {
       .fatures-list-icon {
         margin-right: 1.2rem;
+        @media #{$lg} {
+          margin-right: 0.8rem;
+          width: 3.2rem;
+          height: 3.2rem;
+        }
       }
     }
   }
@@ -120,6 +189,12 @@ Home Page Style CSS
 /******* Testimonial Section *******/
 .testimonial-title-wrap {
   margin-bottom: 10rem;
+  @media #{$lg} {
+    margin-bottom: 8rem;
+  }
+  @media #{$md} {
+    margin-bottom: 6rem;
+  }
   .testimonial-top-title {
     margin-bottom: 2.5rem;
     letter-spacing: 0.5rem;
@@ -142,6 +217,9 @@ Home Page Style CSS
     display: flex;
     align-items: center;
     justify-content: center;
+    @media #{$md} {
+      margin-top: 3rem;
+    }
     .owl-prev,
     .owl-next {
       position: relative;
@@ -174,9 +252,18 @@ Home Page Style CSS
 .testimonial-item {
   .testimonial-quote {
     max-width: 14.5rem;
+    @media #{$xl} {
+      max-width: 8rem;
+    }
+    @media #{$lg} {
+      max-width: 6rem;
+    }
   }
   .testimonial-desc {
     margin: 6rem 0;
+    @media #{$xl} {
+      margin: 3rem 0;
+    }
   }
   .testimonial-user {
     .testimonial-user-img {
@@ -199,16 +286,33 @@ Home Page Style CSS
 
 /******* Contact Section *******/
 .h-contact-section {
-  padding: 15rem 0;
-  background: linear-gradient(180deg, #001A35 0%, rgba(0, 26, 53, 0.66) 49.49%, #001A35 94.51%), url("../images/contact/contact-bg.jpg") no-repeat top / cover;
+  background: linear-gradient(
+      180deg,
+      #001a35 0%,
+      rgba(0, 26, 53, 0.66) 49.49%,
+      #001a35 94.51%
+    ),
+    url("../images/contact/contact-bg.jpg") no-repeat top / cover;
+    @media #{$xsm} {
+      padding-top: 3rem;
+    }
 }
 
 .h-contact-title {
   margin: 3.5rem 0;
+  @media #{$sm} {
+    margin: 2.5rem 0;
+  }
 }
 
 .h-contact-form {
   padding: 8rem 6rem;
+  @media #{$lg} {
+    padding: 5rem 4rem;
+  }
+  @media only screen and (max-width: 520px) {
+    padding: 3rem 2rem;
+  }
   .h-contact-input {
     &:not(:last-child) {
       margin-bottom: 2rem;
@@ -226,6 +330,9 @@ Home Page Style CSS
     &:focus {
       border-color: var(--border-2);
     }
+    @media #{$xsm} {
+      height: 5rem;
+    }
   }
   .h-contact-message {
     height: 12rem;
@@ -234,6 +341,9 @@ Home Page Style CSS
     padding: 1.5rem;
     &:hover {
       background-color: var(--bg-color3);
+    }
+    @media #{$xsm} {
+      padding: 1rem;
     }
   }
 }

@@ -1,7 +1,17 @@
 /*------ FAQ CSS ------*/
+.faq-section {
+  padding-top: 4rem;
+  @media #{$xsm} {
+    padding-top: 2rem;
+  }
+}
+
 .faq-title-wrap {
   .faq-title {
     margin-bottom: 6.4rem;
+    @media #{$xsm} {
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -18,6 +28,19 @@
   .accordion-button {
     padding: 2.5rem 2.5rem 2.5rem;
     border-radius: 1.6rem !important;
+    @media #{$xl} {
+      font-size: 2.2rem;
+    }
+    @media #{$lg} {
+      font-size: 2rem;
+    }
+    @media #{$xsm} {
+      font-size: 1.8rem;
+      padding: 2rem;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 1.5rem;
+    }
     &:not(.collapsed) {
       background-color: transparent;
       box-shadow: 0 0 0 transparent;
@@ -25,10 +48,10 @@
   }
   .accordion-button::after {
     flex-shrink: 0;
-    width: 4.1rem;
-    height: 4.1rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-image: url("../images/icons/plus.svg");
-    background-size: 4.1rem;
+    background-size: 3.5rem;
   }
   .accordion-button:not(.collapsed)::after {
     background-image: url("../images/icons/minus.svg");

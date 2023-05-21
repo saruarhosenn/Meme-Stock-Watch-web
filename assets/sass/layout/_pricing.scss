@@ -1,28 +1,24 @@
 /*------ Pricing CSS ------*/
 .pricing-sec {
   padding-top: 30rem;
+  @media #{$xl} {
+    padding-top: 23rem;
+  }
+  @media #{$lg} {
+    padding-top: 22rem;
+  }
+  @media #{$md} {
+    padding-top: 18rem;
+  }
+  @media #{$xsm} {
+    padding-top: 16rem;
+  }
 }
 
 .pricing-title {
   width: 100%;
   max-width: 82rem;
-  @media #{$md} {
-    .pricing-title-lg {
-      font-size: 4.5rem;
-    }
-    .pricing-title-md {
-      font-size: 2rem;
-    }
-  }
-  @media #{$sm} {
-    .pricing-title-lg {
-      font-size: 3.5rem;
-    }
-    .pricing-title-md {
-      font-size: 2rem;
-    }
-  }
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 400px) {
     .pricing-title-lg {
       font-size: 3rem;
     }
@@ -35,6 +31,9 @@
 .pricing-tab {
   margin: 5.5rem 0;
   overflow: hidden;
+  @media #{$xsm} {
+    margin: 4rem 0;
+  }
   .pricing-tablinks {
     padding: 1.2rem 2.5rem;
     flex-grow: 1;
@@ -82,7 +81,7 @@
 }
 
 .pricing-card {
-  padding: 3.6rem 3.6rem 4.6rem;
+  padding: 3.6rem 3rem 4.6rem;
   border-radius: 2.3rem;
   transition: all 0.4s linear;
   &:hover {
@@ -160,10 +159,22 @@
 .pricing-card-private {
   .pricing-card-body {
     .pricing-card-service {
-      margin-top: 3rem;
+      margin-top: 4rem;
+      @media #{$xl} {
+        margin-top: 3rem;
+      }
+      .pricing-card-service-item:not(:last-child) {
+        margin-bottom: 1.8rem;
+        @media #{$xl} {
+          margin-top: 1.4rem;
+        }
+      }
     }
   }
   .pricing-card-footer {
-    margin-top: 5.7rem;
+    margin-top: 7rem;
+    @media #{$xl} {
+      margin-top: 3.8rem;
+    }
   }
 }

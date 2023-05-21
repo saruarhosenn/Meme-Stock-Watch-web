@@ -29,7 +29,7 @@ Variables
   --size-lg: 1.4rem;
   --size-md: 1.2rem;
   --size-sm: 1rem;
-/*
+  /*
 64(70) ----- 2nd page
 56(*67, 59) 
 36(*54, 36, 44)
@@ -48,45 +48,77 @@ Variables
 10(14)
 */
   /*________ Text Color ________*/
-  --primary-color: #ffffff; 
-  --secondary-color: #001A35; 
-  --text-color3: #24EBA5; 
-  --text-color4: #000000; 
-  --text-color5: #083038;  
-  --text-color6: #231D4F; 
-  --text-color7: #848199; 
-  --text-color8: #1E1E1E; 
-  --text-color9: #B1B1B5; 
-  --text-color10: #E54322; 
+  --primary-color: #ffffff;
+  --secondary-color: #001a35;
+  --text-color3: #24eba5;
+  --text-color4: #000000;
+  --text-color5: #083038;
+  --text-color6: #231d4f;
+  --text-color7: #848199;
+  --text-color8: #1e1e1e;
+  --text-color9: #b1b1b5;
+  --text-color10: #e54322;
   --text-color11: rgba(8, 48, 56, 0.5);
-  --text-color12: #6B6B6B;
-  --text-color13: #0D4C92;
-  --text-color14: #D7D7D7;
+  --text-color12: #6b6b6b;
+  --text-color13: #0d4c92;
+  --text-color14: #d7d7d7;
   --text-color15: #697386;
-  --text-color16: #8792A2;
+  --text-color16: #8792a2;
 
   /*_________ BG Color _________*/
-  --body-bg: #001A35;
+  --body-bg: #001a35;
   --primary-bg: #ffffff;
-  --secondary-bg: #24EBA5;
-  --bg-color3: #001A35;
-  --bg-color4: #2F3142;
-  --bg-color5: #002C5A;
-  --bg-color6: #0D4C92;
-  --bg-color7: #5865F2;
-  --bg-color8: #6C79FF;
+  --secondary-bg: #24eba5;
+  --bg-color3: #001a35;
+  --bg-color4: #2f3142;
+  --bg-color5: #002c5a;
+  --bg-color6: #0d4c92;
+  --bg-color7: #5865f2;
+  --bg-color8: #6c79ff;
 
   /*_________ Border Color _________*/
   --border-1: #ffffff;
-  --border-2: #001A35;
-  --border-3: #24EBA5;
-  --border-4: #D7D7D7;
+  --border-2: #001a35;
+  --border-3: #24eba5;
+  --border-4: #d7d7d7;
   --border-5: rgba(60, 66, 87, 0.12);
 }
 
+@media #{$xl} {
+  :root {
+    --size-12xl: 5rem;
+    --size-7xl: 2.2rem;
+    --size-6xl: 2rem;
+    --size-5xl: 1.8rem;
+  }
+}
 
 @media #{$lg} {
   :root {
+    --size-12xl: 4.3rem;
+    --size-11xl: 3rem;
+    --size-8xl: 2.2rem;
+    --size-7xl: 2rem;
+    --size-6xl: 1.8rem;
+    --size-5xl: 1.6rem;
+    --size-4xl: 1.8rem;
+    --size-2xl: 1.6rem;
     --size-xl: 1.4rem;
+  }
+}
+
+@media #{$sm} {
+  :root {
+    --size-12xl: 3.5rem;
+    --size-7xl: 1.8rem;
+    --size-3xl: 1.8rem;
+  }
+}
+
+@media #{$xsm} {
+  :root {
+    --size-12xl: 3rem;
+    --size-7xl: 1.6rem;
+    --size-4xl: 1.7rem;
   }
 }

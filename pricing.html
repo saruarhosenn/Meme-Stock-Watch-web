@@ -41,20 +41,19 @@
 	  =====================================================
 	-->
   <header class="sticky-header bg-color3">
-    <div class="sidebar-overlay"></div>
     <nav class="container">
       <div class="row align-items-center">
         <!-- ******** Header Logo ******** -->
-        <div class="col-xl-3">
-          <a href="pricing.html" class="header-logo d-block">
+        <div class="col-xl-3 col-lg-2 col-sm-6 col-9">
+          <a href="index.html" class="header-logo d-block">
             <img src="assets/images/logo/logo.png" alt="logo" class="img-fluid">
           </a>
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-6 col-lg-7" id="sidebar">
           <!-- ******** Main Menu ******** -->
-          <div class="main-menu d-flex align-items-center justify-content-center">
-            <!-- ***** Pages Menu Item ***** -->
-            <ul class="menu d-flex align-items-center">
+          <div class="main-menu sidebar-menu d-flex align-items-center justify-content-lg-center">
+            <img src="assets/images/icons/closed.svg" alt="closed" class="sidebar-closed-icon d-inline-block d-lg-none">
+            <ul class="menu d-lg-flex align-items-center justify-content-center">
               <li class="menu-item">
                 <a href="index.html" class="menu-link primary-font-600 size-xl primary-color text-capitalize">Home</a>
               </li>
@@ -75,10 +74,16 @@
               <li class="menu-item">
                 <a href="#faq" class="menu-link primary-font-600 size-xl primary-color text-capitalize">FAQ</a>
               </li>
+              <li class="menu-item menu-btn-item menu-btn-item-1 d-block d-lg-none">
+                <a href="#" class="menu-btn-link primary-font-500 size-xl primary-color rounded-8">Log in</a>
+              </li>
+              <li class="menu-item menu-btn-item menu-btn-item-2 d-block d-lg-none">
+                <a href="#" class="menu-btn-link bg-btn">Sign up</a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="col-xl-3">
+        <div class="col-lg-3 d-none d-lg-block">
           <!-- ***** Header Button ***** -->
           <ul class="menu-btn menu d-flex align-items-center justify-content-end">
             <li class="menu-btn-item menu-btn-item-1">
@@ -88,6 +93,13 @@
               <a href="#" class="menu-btn-link bg-btn">Sign up</a>
             </li>
           </ul>
+        </div>
+        <div class="col-sm-6 col-3 d-block d-lg-none">
+          <div class="sidebar-toggler">
+            <div class="sidebar-toggler-line"></div>
+            <div class="sidebar-toggler-line"></div>
+            <div class="sidebar-toggler-line"></div>
+          </div>
         </div>
       </div>
     </nav>
@@ -106,11 +118,11 @@
 		-->
     <section class="pricing-section pricing-sec bg-color3 sec-b-space">
       <div class="container">
-        <div class="pricing-title text-center">
+        <div class="pricing-title text-center mx-auto">
           <h2 class="pricing-title-lg primary-font-600 size-12xl primary-color mb-4 mb-sm-5">Simple, transparent pricing
           </h2>
-          <p class="pricing-title-md primary-font-400 size-7xl text-color3 d-table mx-auto position-relative">Save 16%
-            With Yearly Price Plan</p>
+          <p class="pricing-title-md primary-font-400 size-7xl text-color3 d-table mx-auto position-relative">after groups and add Access to all three of the following groups:
+            and choose any two of the three following groups:</p>
         </div>
         <div class="pricing-tab-area">
           <!--****** Pricing Tab Button ******-->
@@ -1067,7 +1079,7 @@
           <p class="primary-font-400 size-2xl text-color8">*You can unsubscribe anytime</p>
         </div>
       </div>
-      <div class="newsletter-circle rounded-circle"></div>
+      <div class="newsletter-circle rounded-circle d-none d-md-block"></div>
     </section>
     <!-- 
 		  =====================================================
@@ -1231,10 +1243,12 @@
 	  Back To Top Btn
 	  ------------------------------------------------
 	-->
-  <button type="button" id="scroll-up-btn" title="Go to top"
-    class="d-flex align-items-center justify-content-center rounded">
-    <img src="assets/images/icons/arrow-up.svg" alt="arrow-up" />
-  </button>
+  <div class="scroll-up-btn" title="Go to top">
+    <img src="assets/images/icons/arrow-up.svg" class="arrow-up" alt="arrow-up" />
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
   <!-- 
 	  ------------------------------------------------
 	  Back To Top Btn
@@ -1247,6 +1261,7 @@
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/backToTop.js"></script>
 </body>
 
 </html>
