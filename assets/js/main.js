@@ -12,9 +12,6 @@
     }
   });
 
-  /* ===== Nice Select JS ===== */
-  $(".basic-plan-select, .pay-form-select").niceSelect();
-
   /* ===== Counter Up JS ===== */
   $(".counter").counterUp({
     delay: 10,

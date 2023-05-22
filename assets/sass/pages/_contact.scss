@@ -5,6 +5,9 @@ Contact Page Style CSS
 */
 .contact-section {
   padding: 18rem 0 8rem;
+  @media #{$xsm} {
+    padding: 13rem 0;
+  }
 }
 
 .contact-wrapper {
@@ -34,6 +37,9 @@ Contact Page Style CSS
     border: 0.1rem solid var(--border-3);
     &::placeholder {
       color: var(--text-color12);
+    }
+    @media #{$xsm} {
+      height: 6rem;
     }
   }
   .contact-form-message {
